@@ -8,7 +8,7 @@ qb-core\shared\items
 	['bakingsoda'] 					 = {['name'] = 'bakingsoda', 			  	  	  	['label'] = 'baking soda', 					['weight'] = 100, 		['type'] = 'item', 		['image'] = 'bakingsoda.png', 				['unique'] = false, 	['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'baking soda'},
 	['glassbottle'] 					 = {['name'] = 'glassbottle', 			  	  	  	['label'] = 'glass bottle', 					['weight'] = 100, 		['type'] = 'item', 		['image'] = 'glassbottle.png', 				['unique'] = false, 	['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'empty glass bottle'},
 	['clorox'] 					 = {['name'] = 'clorox', 			  	  	  	['label'] = 'clorox', 					['weight'] = 100, 		['type'] = 'item', 		['image'] = 'clorox.png', 				['unique'] = false, 	['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'to clean thing'},
-	['table'] 					 = {['name'] = 'table', 			  	  	  	['label'] = 'table', 					['weight'] = 100, 		['type'] = 'item', 		['image'] = 'table.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'your table'},
+	['table'] 					 = {['name'] = 'table', 			  	  	  	['label'] = 'table', 					['weight'] = 30000, 		['type'] = 'item', 		['image'] = 'table.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'your table'},
 
 ```
 
