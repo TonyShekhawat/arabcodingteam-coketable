@@ -1,7 +1,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-description 'QB-Table Made By Kareem Dacca Send Nudes daccakareem#7672 plz'
+description 'arabcodingteam-Table Made By Kareem Dacca arabcodingteam Send arabcodingteam'
 version '1.0.0'
 
 shared_script 'config.lua'
