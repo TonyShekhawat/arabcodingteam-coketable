@@ -1,7 +1,7 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['arabcodingteam-core']:GetCoreObject()
 local deleteobj = false
 
-RegisterNetEvent('qb-coketable:Createtable', function(spawnedObj)
+RegisterNetEvent('arabcodingteam-coketable:Createtable', function(spawnedObj)
   local ped = GetPlayerPed(PlayerId())
   local inveh = IsPedInAnyVehicle(ped)
 if deleteobj == false and not inveh then
@@ -25,7 +25,7 @@ end
 end)
 
 
-RegisterNetEvent('qb-coketable:DeleteTable', function()
+RegisterNetEvent('arabcodingteam-coketable:DeleteTable', function()
     local ped = GetPlayerPed(PlayerId())
     local selectedWeapon = GetSelectedPedWeapon(ped)
     if selectedWeapon ~= GetHashKey("weapon_unarmed") then
@@ -47,7 +47,7 @@ RegisterNetEvent('qb-coketable:DeleteTable', function()
     end
 end)
 
-RegisterNetEvent('qb-coketable:Makecokebaggy', function(data)
+RegisterNetEvent('arabcodingteam-coketable:Makecokebaggy', function(data)
   QBCore.Functions.TriggerCallback("qb-coketable:getitem", function(result)
     if result then
       TriggerEvent('animations:client:EmoteCommandStart', {"mechanic4"})
@@ -71,7 +71,7 @@ RegisterNetEvent('qb-coketable:Makecokebaggy', function(data)
   end)
 end)
 
-RegisterNetEvent('qb-coketable:TableShop', function()
+RegisterNetEvent('arabcodingteam-coketable:TableShop', function()
 	local HouseItems = {}
 	HouseItems.label = "Coke House"
 	HouseItems.items = Table.CokeHouse
@@ -79,7 +79,7 @@ RegisterNetEvent('qb-coketable:TableShop', function()
 	TriggerServerEvent("inventory:server:OpenInventory", "shop", "CokeHouse_"..math.random(1, 99), HouseItems) 
 end)
 
-RegisterNetEvent('qb-coketable:knockdoor', function()
+RegisterNetEvent('arabcodingteam-coketable:knockdoor', function()
   local hour = GetClockHours()
   TriggerEvent('animations:client:EmoteCommandStart', {"knock"})
   Wait(2000)
@@ -93,7 +93,7 @@ function GetTime()
 	  return true
   end
   print(hour)
-  TriggerEvent("qb-coketable:TableShop")
+  TriggerEvent("arabcodingteam-coketable:TableShop")
 end
 
 Citizen.CreateThread(function()
@@ -101,19 +101,19 @@ Wait(200)
 local models = {
   Table.prop,
   }
-  exports['qb-target']:AddTargetModel(models, {
+  exports['arabcodingteam-target']:AddTargetModel(models, {
     options = {
       {
         num = 1,
         type = "client",
-        event = "qb-coketable:DeleteTable",
+        event = "arabcodingteam-coketable:DeleteTable",
         icon = 'fas fa-hand',
         label = 'put in',
       },
       {
         num = 2,
         type = "client",
-        event = "qb-coketable:Makecokebaggy",
+        event = "arabcodingteam-coketable:Makecokebaggy",
         icon = 'fas fa-cannabis',
         label = 'Make Coke',
       },
@@ -121,7 +121,7 @@ local models = {
     distance = 1.5,
   })
   Wait(200)
-  exports['qb-target']:AddBoxZone("KnockDoor", vector3(2222.44, 5614.94, 54.71), 1.3, 1, {
+  exports['arabcodingteam-target']:AddBoxZone("KnockDoor", vector3(2222.44, 5614.94, 54.71), 1.3, 1, {
     name = "KnockDoor",
     heading = 15,
     debugPoly = false,
@@ -132,7 +132,7 @@ local models = {
       {
         num = 1,
         type = "client",
-        event = "qb-coketable:knockdoor",
+        event = "arabcodingteam-coketable:knockdoor",
         icon = 'fas fa-home',
         label = 'Knock Door',
       }
