@@ -1,17 +1,17 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['arabcodingteam-core']:GetCoreObject()
 
 QBCore.Functions.CreateUseableItem("table", function(source, item)
     local src = source
 	local Player = QBCore.Functions.GetPlayer(src)
     local item = 'glassbottle'
 	if Player.Functions.GetItemByName(item) ~= nil then
-        TriggerClientEvent('qb-coketable:Createtable', source)
+        TriggerClientEvent('arabcodingteam-coketable:Createtable', source)
     else
         TriggerClientEvent('QBCore:Notify', src, 'You Are Missing A Galss Bottle!', 'error')
 	end
 end)
 
-QBCore.Functions.CreateCallback('qb-coketable:getitem', function(source, cb, items, hasItems)
+QBCore.Functions.CreateCallback('arabcodingteam-coketable:getitem', function(source, cb, items, hasItems)
     local src = source
     local hasItems = false
     local numero = 0
